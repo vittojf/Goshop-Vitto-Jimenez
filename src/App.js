@@ -1,17 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
+import NavBar from './Components/Navbar/Navbar';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p style={{fontSize:'30pt'}}>
-         GoShop
-        </p>
-      
-      </header>
-    </div>
+    <>
+    <NavBar/>
+    <ItemListContainer greeting="BIENVENIDO A GOSHOP"/>
+    </>
+   
   );
 }
 
