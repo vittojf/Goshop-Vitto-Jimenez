@@ -3,7 +3,7 @@ import logo from "../../logo.svg";
 import CartWidget from "../CartWidget/CartWidget";
 import "../../styles/navbar/navbar.css";
 
-import ListItem from "../ListItem/listItem";
+import ListItem from "../ListItemNav/listItemNav";
 
 function NavBar() {
   const links = ["Inicio", "Tecnología", "Hogar", "Moda", "Mas", "Contacto"];

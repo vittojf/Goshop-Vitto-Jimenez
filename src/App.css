@@ -1,3 +1,6 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 body{
   background-color: rgba(255, 242, 226, 0.867);
 
