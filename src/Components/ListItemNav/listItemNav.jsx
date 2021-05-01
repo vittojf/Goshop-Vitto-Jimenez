@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 const ListItem = ({links}) => {
 
 
@@ -6,7 +7,7 @@ const ListItem = ({links}) => {
 
     <ul className="list">
 
-    {links.map((e)=><a href="/" key={e} ><li>{e}</li></a>)}
+    {links.map((e)=><Link key={e}  to={`/${e === 'inicio'? '': `category/${e}`}`}><li key={e}>{e}</li></Link>)}
     </ul>
 
   );

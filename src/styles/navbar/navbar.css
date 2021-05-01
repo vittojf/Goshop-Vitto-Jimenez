@@ -14,15 +14,28 @@
   cursor: pointer;
   transition: 190ms ease-in-out;
   float: left;
+  text-transform: capitalize;
 }
-.list a {
+
+
+a{
   text-decoration: none;
   color: black;
 }
-.list li:hover {
-  color: rgb(123, 194, 141);
+
+
+
+
+
+.list li:hover  {
+  color: rgb(123, 194, 141) !important;
   border-bottom-color: rgb(123, 194, 141);
 }
+
+
+
+
+
 
 nav {
   display: flex;

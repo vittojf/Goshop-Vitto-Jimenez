@@ -6,7 +6,7 @@ import "../../styles/navbar/navbar.css";
 import ListItem from "../ListItemNav/listItemNav";
 
 function NavBar() {
-  const links = ["Inicio", "Tecnología", "Hogar", "Moda", "Mas", "Contacto"];
+  const links = ["inicio", "tecnología", "hogar", "moda", "mas"];
 
   return (
     <nav>

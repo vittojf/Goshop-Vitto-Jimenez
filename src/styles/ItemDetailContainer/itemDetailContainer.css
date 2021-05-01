@@ -1,0 +1,43 @@
+.container-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5rem;
+
+  }
+.card-detail{
+    -ms-flex-direction:initial !important;
+    flex-direction:initial !important;
+    max-width: 100% !important;
+    padding: 0.25rem;
+    width: 100%;
+    
+}
+
+.card-detail .card-body{
+    width: 50%;
+    text-align: start !important;
+    
+}
+
+
+.card-img-detail{
+width: 50%;
+padding: 1rem;
+
+}
+
+
+.card-img-detail img{
+    width: 100%;
+    border-radius: 0 !important;
+}
+
+.contain-spinner{
+    display: flex;
+    align-items: center;
+justify-content: center ;
+}
+
+
+

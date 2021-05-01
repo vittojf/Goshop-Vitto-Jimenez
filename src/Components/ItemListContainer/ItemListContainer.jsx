@@ -2,11 +2,12 @@ import React,{useState,useEffect} from 'react';
 import ItemList from '../ItemList/ItemList';
 import '../../styles/itemListContainer/itemListContainer.css'
 import Spinner from '../Spinner/Spinner';
+import { useParams } from 'react-router';
 
 
 export default function ItemListContainer({greeting}){
   const [items, setItems] = useState([]);
-
+  const {categoryId} = useParams();
   useEffect(() => {
     
   
@@ -23,8 +24,8 @@ export default function ItemListContainer({greeting}){
         {
           "precio": 300,
           "id": 'goshop2lan',
-          "title": "Pizza",
-          "category":"hogar",
+          "title": "Telefono",
+          "category":"tecnología",
           "stock":4,
     
           "url": "https://picsum.photos/id/10/200"
@@ -32,8 +33,8 @@ export default function ItemListContainer({greeting}){
         {
           "precio": 100,
           "id": 'goshop3lan',
-          "title": "Agua",
-          "category":"hogar",
+          "title": "Chemise",
+          "category":"moda",
           "stock":4,
     
           "url": "https://picsum.photos/id/20/200"
@@ -51,7 +52,7 @@ export default function ItemListContainer({greeting}){
           "precio": 10,
           "id": 'goshop5lan',
           "title": "Mango",
-          "category":"hogar",
+          "category":"mas",
           "stock":10,
     
           "url": "https://picsum.photos/id/40/200"
@@ -68,8 +69,8 @@ export default function ItemListContainer({greeting}){
         {
             "precio": 500,
             "id": 'goshop7lan',
-            "title": "Malta",
-            "category":"hogar",
+            "title": "Camisa Blanca",
+            "category":"moda",
             "stock":5,
     
             "url": "https://picsum.photos/id/50/200"
@@ -78,7 +79,7 @@ export default function ItemListContainer({greeting}){
               "precio": 500,
               "id": 'goshop8lan',
               "title": "Malta",
-              "category":"hogar",
+              "category":"mas",
               "stock":10,
     
               "url": "https://picsum.photos/id/50/200"
@@ -105,7 +106,7 @@ export default function ItemListContainer({greeting}){
 
     return(
     <section className="container" >
-{  items.length===0 ? <Spinner/> :          <ItemList product={items} />    }
+{  items.length===0 ? <Spinner/> :categoryId? <ItemList product={items.filter(el=>el.category === categoryId )} /> : <ItemList product={items} />    }
  
     </section>) 
 }
