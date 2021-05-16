@@ -1,29 +1,33 @@
 import React, { useState } from "react";
+import { useCartContx } from "../../context/cartContext";
 import CountBtn from "../CountBtn/CountBtn";
-function ItemCount({ stock, init }) {
+
+function ItemCount({ stock, init,item }) {
   const [counter, setCounter] = useState(init);
 
-  const addC = (stock) => {
   
+  const { addItems } = useCartContx();
+
+
+  const addC = () => {
     setCounter(counter + 1);
   };
 
   const subtractC = () => {
-    
     counter > init ? setCounter(counter - 1) : setCounter(counter);
   };
 
-  const addCart = (counter) => {
-    alert(
-      `agregaste al carrito ${
-        counter === 1 ? `${counter} producto` : `${counter} productos`
-      }`
-    );
-  };
+
   return (
     <div className="counter">
-     
-     <CountBtn stock={stock} addC={addC} subtractC={subtractC} counter={counter} addCart={addCart}/>
+      <CountBtn
+        stock={stock}
+        addC={addC}
+        subtractC={subtractC}
+        counter={counter}
+        addCart={()=>addItems(counter,item)}
+  
+      />
     </div>
   );
 }

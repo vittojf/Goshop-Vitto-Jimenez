@@ -1,0 +1,117 @@
+.container-cart {
+  position: relative;
+
+  padding: 0 2rem;
+  overflow-x: auto;
+}
+
+.container-cart table {
+  margin-top: 2rem;
+
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.link-search{
+    background-color: rgb(255, 174, 0);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.container-cart table th {
+  text-align: left;
+  padding: 5px;
+  background-color: #222;
+  color: white;
+  font-weight: normal;
+}
+
+.container-cart .cart-inf {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-cart table td {
+  padding: 10px 5px;
+}
+
+.cart-inf div {
+  text-align: start;
+  margin-right: 20px;
+}
+.cart-inf button {
+  display: inline-block;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.container-cart table td input[type="text"] {
+  display: inline-block;
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+
+  text-align: center;
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 5px;
+}
+
+.pay-info {
+  display: flex;
+  float: right;
+  flex-wrap: nowrap;
+  border-top: 1px solid black;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.pay-info .btn {
+  border: none;
+  background: none;
+  background: rgb(161, 161, 161);
+
+  margin-left: 1rem;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  outline: none;
+  margin-top: 1rem;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.pay-info .check {
+  background: rgb(152, 230, 80);
+}
+
+table button {
+  display: inline-block;
+  border: none;
+  padding: 0.5rem 1.8rem;
+  border-radius: 0.25rem;
+  font-size: 12pt;
+  font-weight: bold;
+  margin-left: 0;
+  text-align: center;
+  width: 30%;
+  cursor: pointer;
+}
+@media (max-width: 523px) {
+  table button {
+    display: flex;
+    margin: 5px;
+    width: 100%;
+  }
+  .container-cart table td {
+    text-align: center;
+  }
+  .container-cart table td input[type="text"] {
+    width: 100%;
+  }
+  .container-cart table th {
+    text-align: center;
+  }
+}

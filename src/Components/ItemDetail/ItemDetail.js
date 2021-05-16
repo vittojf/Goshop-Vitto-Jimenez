@@ -1,7 +1,12 @@
 import React from "react";
+
+
 import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({ product }) => {
+
+ 
+  
   return (
     <div className="container-detail">
       {product.map(
@@ -17,13 +22,18 @@ const ItemDetail = ({ product }) => {
               <hr />
 
               <b>{precio}$</b>
-              <ItemCount stock={stock} init={1} />
+              <ItemCount stock={stock} init={0} item={{id,url,title,category,precio,stock,description}}/>
+          
             </div>
           </div>
         )
       )}
     </div>
   );
+ 
+
 };
 
 export default ItemDetail;
+
+

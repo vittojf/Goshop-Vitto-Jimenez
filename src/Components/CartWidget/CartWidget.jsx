@@ -1,8 +1,16 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useCartContx } from "../../context/cartContext";
 
 const CartWidget = () => {
-    return (<button className="btn"><img className="Cart-logo" src="/img/cart.png" alt="logo"/></button> );
-}
- 
-export default CartWidget;
+  const { count } = useCartContx();
+  return (
+    <Link to="/cart" className="btn">
+      <img className="Cart-logo" src="/img/cart.png" alt="logo" />
+      {count?<span>{count}</span>:''}
+      
+    </Link>
+  );
+};
 
+export default CartWidget;

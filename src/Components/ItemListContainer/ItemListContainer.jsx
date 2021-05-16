@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import ItemList from '../ItemList/ItemList';
 import '../../styles/itemListContainer/itemListContainer.css'
 import Spinner from '../Spinner/Spinner';
+/*import {getFirestore} from '../../firebase'*/
 import { useParams } from 'react-router';
 
 
@@ -10,7 +11,15 @@ export default function ItemListContainer({greeting}){
   const {categoryId} = useParams();
   useEffect(() => {
     
-  
+  /*const db = getFirestore();
+
+  const itemColletion = db.colletion("items");
+
+  itemColletion.get().then((querySnapShot)=>{
+    querySnapShot.size === 0 ? console.log('no hay items'): console.log(`hay ${querySnapShot} items`)
+    
+
+  })*/
     const call = new Promise((res,rej)=>{
       const productos=[
         {
