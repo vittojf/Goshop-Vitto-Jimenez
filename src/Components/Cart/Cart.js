@@ -2,15 +2,36 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useCartContx } from "../../context/cartContext";
 import "../../styles/cart/cart.css";
+import ItemCount from "../ItemCount/ItemCount";
+/*import {getFirestore} from '../../firebase'*/
 
 export default function Cart() {
-  const { removeItem, items, count, total,clear } = useCartContx();
+  const {  items, count, total,clear,removeItem } = useCartContx();
+  
+  /*
+  const [userInfo, setUserInfo] = useState({
+    name: "",
+    mail: "",
+    confirm: "",
+    phone: "",
+  });
+  const[order, setOrder]= useState({
+    id:"",
+    title:"",
+    price:"",
+    quantity:""
+  })
+
+  const db = getFirestore();
+
+  const orders = db.collection("orders")
+  const getProducts = items.map(el=>({id:el.id,title:el.title,price:el.pice,quantity:el.quantity}))
 
 
-  const sumQty=(qty)=>{
-     return qty+1
-  }
-  console.log(items);
+  console.log(order)
+*/
+
+
   return (
     <>
       {items  && count? (
@@ -37,22 +58,18 @@ export default function Cart() {
                           <p>
                             <b>{el.title}</b>
                           </p>
-                          <small>Precio:${el.precio}</small>
+                          <small>Precio:${el.price}</small>
                         </div>
                       </div>
                     </td>
-
-                    <td>
-                      <input type="text" value={el.quantity} onChange={sumQty} />{" "}
-                      
-                    </td>
-                    <td>{el.quantity===1? el.precio: el.precio*el.quantity}</td>
-                    <td>
+           
+                    <ItemCount countCart={el.quantity} init={el.quantity} item={el} condi="cart" price={el.price} />
+                 
+                    <td>{el.quantity*el.price}</td>
+          <td>
                       {" "}
                       <button
-                        onClick={() => {
-                            removeItem(el.id, el.quantity);
-                        }}
+                        onClick={()=>removeItem(el.id,el.quantity)}
                         >
                         <i className="fa fa-trash" aria-hidden="true"></i>
                       </button>
@@ -69,7 +86,7 @@ export default function Cart() {
             <button onClick={clear} className="btn ">
               Vaciar carrito<i className="fa fa-trash" aria-hidden="true"></i>
             </button>
-            <button className="btn check">
+            <button className="btn check" >
               Comprar <i className="fa fa-check" aria-hidden="true"></i>
             </button>
           </div>

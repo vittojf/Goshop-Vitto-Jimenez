@@ -4,12 +4,20 @@ import { useCartContx } from "../../context/cartContext";
 
 const CartWidget = () => {
   const { count } = useCartContx();
-  return (
-    <Link to="/cart" className="btn">
-      <img className="Cart-logo" src="/img/cart.png" alt="logo" />
-      {count?<span>{count}</span>:''}
-      
-    </Link>
+  return (<>
+    {count?
+     <Link to="/cart" className="btn">
+     <img className="Cart-logo" src="/img/cart.png" alt="logo" />
+         
+    <span>{count}</span>
+     
+   </Link>
+
+    
+    :''
+   }
+    
+    </>
   );
 };
 

@@ -2,9 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 
-const Item = ({ precio,id,title,category,url,stock}) => {
+const Item = ({ price,id,title,category,url,stock}) => {
  
-  
   return (
 
 <>
@@ -16,8 +15,8 @@ const Item = ({ precio,id,title,category,url,stock}) => {
               
               <hr/>
            
-              <b>{precio}$</b> 
-              <ItemCount stock={stock} init={0} item={{precio,id,title,category,url,stock}} />
+              <b>{price}$</b> 
+              <ItemCount stock={stock} init={0} item={{price,id,title,category,url,stock}}  condi="" />
           </div>
           </div>
   </> 
