@@ -5,26 +5,44 @@ export const CartContext = createContext([]);
 export const useCartContx = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
-  const [count, setCount] = useState(0);
-  const [items, setItems] = useState([]);
-
+  const [count, setCount] = useState(localStorage.getItem('count')?JSON.parse(localStorage.getItem('count')):0);
+  const [items, setItems] = useState(localStorage.getItem('cart')?JSON.parse(localStorage.getItem('cart')):[]);
+const [alertShow, setAlertShow] = useState(false);
   useEffect(() => {
 
-  }, [items]);
+    localStorage.setItem('cart',JSON.stringify(items))
+    localStorage.setItem('count',JSON.stringify(count))
+if(count>=15){
+  alert('Carrito lleno! :/')
+}
+ 
+  }, [items,count]);
 
 
   //AGREGA EL ITEM AL CARRITO
   const addItems = (quantity, item) => {
-      
+
+    setAlertShow(true)
     //verifica si está el item en el carrito
     if (isInCart(item.id)) {
       sumCount(quantity, item);
     } else {
-      setItems([...items, { ...item, quantity }]);
+      setItems([...items, { ...item, quantity}]);
     }
+    
 
+      setCount(count)
+ 
     setCount(count + quantity);
+    
+    setTimeout(() => {
+      
+      setAlertShow(false)
+     }, 1500);
   };
+
+
+
 
   //Realiza la sumatoría de la cantidad del producto existente en el carrito
   const sumCount = (quantity, item) => {
@@ -33,14 +51,21 @@ export const CartProvider = ({ children }) => {
     copyI[findItem] = {
       ...copyI[findItem],
       quantity: copyI[findItem].quantity + quantity,
+     
+      
     };
+    setItems(copyI);
+  };
+/*
+  const restarStock = (quantity, item) => {
+    const copyI = [...items];
+    const findItem = items.findIndex((el) => el.id === item.id);
+    copyI[findItem].stock = copyI[findItem].stock - quantity;
     setItems(copyI);
   };
 
 
-
-
-
+*/
   // METODOS PARA SUMAR Y RESTAR EL PRODUCTO DENTRO DEL CARRITO
   const subtractCart = ( item) => {
     const copyI = [...items];
@@ -95,7 +120,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ addItems, count, removeItem, items, total, clear, setCount,sumCount,subtractCart,sumCart }}
+      value={{ addItems, count, removeItem, items, total, clear, setCount,sumCount,subtractCart,sumCart,alertShow}}
     >
       {children}
     </CartContext.Provider>

@@ -5,6 +5,7 @@ import "../../styles/navbar/navbar.css";
 
 import ListItem from "../ListItemNav/listItemNav";
 
+
 function NavBar() {
   
   const links = ["inicio", "tecnología", "hogar", "moda", "mas"];
@@ -24,6 +25,7 @@ function NavBar() {
 
         <ListItem links={links} />
         <CartWidget />
+    
       </div>
     </nav>
   );

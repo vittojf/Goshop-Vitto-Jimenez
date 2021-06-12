@@ -82,7 +82,22 @@
   border-radius: 5px;
   font-weight: bold;
 }
+.changeValue  {
+  width: 100%;
 
+  
+}
+.changeValue input{
+  
+  margin: 0 1rem;
+}
+
+.changeValue .changeAdd{
+  background: rgb(255, 156, 149);
+}
+.changeValue .changeSubt{
+  background: rgb(183, 253, 204);
+}
 .pay-info .check {
   background: rgb(152, 230, 80);
 }

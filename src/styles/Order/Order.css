@@ -1,0 +1,186 @@
+.order{
+    display:flex;
+  justify-content: center;
+}
+
+.order-content{
+    display: block;
+text-align: center;
+}
+
+.order-content input{
+  
+    padding: 11px 19px;
+
+        display: inline-block;
+    border: 0;
+    background: white;
+    color: #222;
+    border: 1px solid rgba(128, 128, 128, 0.596);
+    border-radius: 6px 0 0 6px;
+    font-size: 15pt;
+    box-sizing: border-box;
+}
+
+.order-content button{
+
+    border: none;
+    background-color:rgb(62, 194, 117);
+    padding: 12px 20px;
+cursor: pointer;
+    font-size: 15pt;
+    transition: ease-in-out 150ms;
+}
+
+.orders-items{
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    
+   
+}
+.fact-order{
+
+    margin-top:1rem ;
+}
+.fact-head{
+    background-color:rgb(238, 148, 75) ;
+    color: #ffff;
+    padding: .50rem;
+    width: 100%;
+}
+.order-Complete{
+ text-align: center;
+}
+.order-Complete .top-margin{
+    margin-top:50px ;    
+}
+
+.order-Complete .btn-finish {
+background-color: rgb(75, 221, 136);
+
+text-align: center;
+
+width: 100% !important;
+padding: 20px 18px;
+font-size: 15pt;
+font-weight: bold;
+border: none;
+cursor: pointer;
+transition: ease-in-out 150ms;
+}
+
+.btn-finish:hover{
+    background-color: rgb(65, 192, 118);
+}
+.order-Complete textarea{
+    width: 100%;
+    text-align: center;
+    font-size: 15pt;
+}
+.fact-body{
+    text-align: center;
+    overflow-x:auto;
+  
+
+}
+.fact-body .row-1{
+    margin-top: 1rem;
+    border-collapse: separate;
+    width: 100%;
+}
+.row-1 th{
+    border: none;
+}
+.item-row{
+   
+    border-collapse: separate;
+    width: 100%;
+   
+
+}
+
+.item-row td,th{
+    border: 1px solid black;
+    text-align: center;
+}
+
+.btn-generator{
+    border: none;
+    background-color:rgb(110, 248, 172);
+    width: 40%;
+    padding: 1rem;
+    font-size: 14pt;
+    margin:0 5%;
+    cursor: pointer;
+}
+
+.btn-re{
+   
+    background-color:rgb(248, 193, 110);
+}
+.form-confirm-order {
+
+
+margin-top:2rem ;
+
+}
+.form-confirm-order input{
+
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 0;
+
+    color: #222;
+    border-bottom: 1px solid black;
+    border-radius: 6px 6px 0 0;
+    font-size: 15pt;
+    box-sizing: border-box;
+
+
+}
+.form-confirm-order #name{
+color: rgb(172, 172, 172);
+border: solid 1px rgb(172, 172, 172) ;
+}
+
+.form-confirm-order label{
+    font-weight: bold;
+    margin: unset !important;
+}
+
+.proces-body ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    overflow: hidden;
+display: flex;
+justify-content: space-between; 
+}
+
+
+
+.proces{
+    display: block;
+    text-align: center;
+    padding: 30px 40px;
+    font-size: 40pt;
+    border-radius: 50%;
+
+    background-color: rgb(255, 255, 255);
+  
+ box-shadow:grey 0px 0px 20px -20px;
+}
+.proces .fa-sms{
+    color: rgb(117, 230, 43);
+}
+.proces .fa-clipboard-check{
+    color: rgb(40, 64, 170);
+}
+.proces img{
+    width: 45px;
+    
+}

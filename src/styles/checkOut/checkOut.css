@@ -1,0 +1,49 @@
+.checkForm{
+    margin-top: 1.5rem;
+
+}
+.checkForm label{
+    font-weight: bold;
+    
+}
+
+.checkForm input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 0;
+    background: unset;
+    color: #222;
+    border-bottom: 1px solid black;
+    border-radius: 6px 6px 0 0;
+    font-size: 15pt;
+    box-sizing: border-box;
+
+
+}
+.checkForm ::placeholder{
+    color: rgb(139, 139, 139);
+}
+.checkForm button{
+margin: 5vh auto;
+    width: 100%;
+    border: none;
+    background-color:rgb(62, 194, 117);
+    padding: 12px 20px;
+cursor: pointer;
+    font-size: 15pt;
+    transition: ease-in-out 150ms;
+  
+}
+.checkForm button:hover{
+    
+    background-color:rgb(57, 165, 102);
+  
+}
+
+@media (max-width: 450px) {
+    .checkForm button{
+        margin:10vh auto;
+    }
+}

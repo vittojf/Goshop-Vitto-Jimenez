@@ -36,14 +36,18 @@ export default function ItemListContainer({ greeting }) {
       .get()
       .then((querySnapshot) => {
         querySnapshot.size === 0
-          ? console.log("no hay items")
+          ? 
+          
+          setItems('No hay items')
           : setItems(
               querySnapshot.docs.map((el) => ({ id: el.id, ...el.data() }))
             );
 
         //console.log(querySnapshot.docs.map((el) => ({ id: el.id, ...el.data() })) );
       })
-      .catch((err) => console.log("Error al recolectar items", err))
+      .catch((err) => {
+       // console.log("Error al recolectar items", err)
+      })
       .finally(() => {
         setLoading(false);
       });

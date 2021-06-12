@@ -1,0 +1,15 @@
+.alert{
+    position:fixed;
+    z-index: 20000;
+    right: 0;
+    bottom:5rem;
+    transition: all 0.3s ease-out;
+    padding: 1rem;
+    background-color: greenyellow;
+    transform: translateX(500px);
+}
+
+.alert-show{
+
+    transform: translateX(0px ) !important;
+}

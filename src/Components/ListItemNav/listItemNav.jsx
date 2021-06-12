@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import OrderWidget from "../OrderWidget/OrderWidget";
+
 const ListItem = ({links}) => {
 
 
@@ -8,6 +10,8 @@ const ListItem = ({links}) => {
     <ul className="list">
 
     {links.map((e)=><Link key={e}  to={`/${e === 'inicio'? '': `category/${e}`}`}><li key={e}>{e}</li></Link>)}
+    <li className="order-icon"><OrderWidget/></li>
+
     </ul>
 
   );

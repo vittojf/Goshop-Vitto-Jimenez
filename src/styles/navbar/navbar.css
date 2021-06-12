@@ -22,6 +22,7 @@
 
 a{
   text-decoration: none;
+
   color: black;
 }
 
@@ -67,6 +68,17 @@ nav {
 }
 .Cart-logo {
   width: 40px;
+}
+
+.orderWidget{
+  font-size: 20pt ;
+  margin: 0 1rem;
+}
+.order-icon{
+ display: flex;
+border-bottom: none !important;
+font-size: 20pt;
+justify-content: center;
 }
 
 .btn span{
